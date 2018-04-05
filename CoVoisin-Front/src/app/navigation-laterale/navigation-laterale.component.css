@@ -1,0 +1,17 @@
+aside {
+  width: 10%;
+  background-color: #323232;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 0 50px 50px 0;
+  position: relative;
+  top: 200px;
+}
+
+div {
+  padding: 5% 0;
+}
+
+img {
+  width: 50%;
+}
