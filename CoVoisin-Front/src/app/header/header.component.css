@@ -1,0 +1,40 @@
+header {
+  background-color: #009698;
+  position: fixed;
+}
+
+img {
+  display: inline-block;
+}
+
+img#logo {
+  display: inline-block;
+}
+
+img#profil {
+  float: left;
+  margin-right: 1%;
+}
+
+p {
+  color: white;
+  position: relative;
+  top:12px;
+
+}
+
+div {
+  display: inline-block;
+  padding: 1%;
+}
+
+nav {
+  display: inline-block;
+  text-align: center;
+}
+
+li {
+  display: inline;
+  color: white;
+  margin: 0 1%;
+}
