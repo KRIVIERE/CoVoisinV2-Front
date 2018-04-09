@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { FormulaireConnexionComponent } from './index/formulaire-connexion/formulaire-connexion.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FormulaireConnexionComponent
   ],
   imports: [
     BrowserModule
