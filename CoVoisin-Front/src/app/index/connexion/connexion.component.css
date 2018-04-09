@@ -1,0 +1,41 @@
+#conteneur {
+  background-image: url("../../../assets/images/photo_presentation.jpg");
+  min-height: 700px;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  position: relative;
+  top: 50px;
+}
+
+form {
+  text-align: center;
+  position: relative;
+  top: 50px;
+}
+
+label {
+  color: white;
+}
+
+#connexion {
+  background-color: #323232;
+  color: white;
+  border: none;
+  position: relative;
+  top: 25px;
+}
+
+#inscription-block {
+  text-align: center;
+  position: relative;
+  top: 100px;
+}
+
+#inscription {
+  background-color: #009698;
+  color: white;
+  border: none;
+}
