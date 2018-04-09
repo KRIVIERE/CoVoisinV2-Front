@@ -1,0 +1,25 @@
+#conteneur {
+  background-image: url("../../../assets/images/patterne.png");
+  padding-top: 5%;
+}
+
+#title-infos {
+  font-size: 1.5em;
+  text-align: center;
+  background-color: #d3d7cf;
+  border-radius: 75px;
+  margin-bottom: 5%;
+}
+
+span,
+h5{
+  font-weight: bold;
+}
+
+.categories {
+  text-align: center;
+}
+
+img {
+  height: 75px;
+}

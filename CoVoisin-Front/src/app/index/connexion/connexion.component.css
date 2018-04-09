@@ -5,6 +5,7 @@
 
 h1 {
   color: white;
+  font-weight: bold;
   text-align: center;
   position: relative;
   top: 50px;
@@ -16,8 +17,17 @@ form {
   top: 50px;
 }
 
+.connexion-form {
+  margin: 3% 0;
+}
+
 label {
   color: white;
+  font-weight: bold;
+}
+
+button {
+  border-radius: 25px;
 }
 
 #connexion {

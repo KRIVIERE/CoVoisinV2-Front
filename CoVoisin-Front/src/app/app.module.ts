@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ConnexionComponent } from './index/connexion/connexion.component';
+import { InformationsComponent } from './index/informations/informations.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ConnexionComponent
+    ConnexionComponent,
+    InformationsComponent
   ],
   imports: [
     BrowserModule
