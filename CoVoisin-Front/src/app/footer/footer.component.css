@@ -1,0 +1,32 @@
+.footer {
+  background-color: #848587 ;
+  color: white;
+  padding: 0;
+  margin: 0;
+  height: 130px;
+}
+
+#logoTSE {
+  height: 90px;
+  float: left;
+  position: relative;
+  top: 25px;
+  z-index: 1000;
+}
+
+#logoDTA {
+  height: 70px;
+  float: right;
+  position: relative;
+  top: 35px;
+  z-index: 1000;
+}
+
+.droit {
+  text-align: center;
+  position: relative;
+  top: 50px;
+  margin:0;
+  padding:0;
+}
+
