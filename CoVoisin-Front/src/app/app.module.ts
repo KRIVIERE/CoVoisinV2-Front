@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavigationLateraleComponent } from './navigation-laterale/navigation-laterale.component';
+import { ConnexionComponent } from './index/connexion/connexion.component';
+import { InformationsComponent } from './index/informations/informations.component';
 
 
 @NgModule({
@@ -13,7 +15,9 @@ import { NavigationLateraleComponent } from './navigation-laterale/navigation-la
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    NavigationLateraleComponent
+    NavigationLateraleComponent,
+    ConnexionComponent,
+    InformationsComponent
   ],
   imports: [
     BrowserModule
