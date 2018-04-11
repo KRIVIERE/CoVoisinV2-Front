@@ -9,6 +9,7 @@ import { NavigationLateraleComponent } from './navigation-laterale/navigation-la
 import { ConnexionComponent } from './index/connexion/connexion.component';
 import { InformationsComponent } from './index/informations/informations.component';
 import { InscriptionComponent } from './inscription/inscription.component';
+import { IndexComponent } from './index/index/index.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { InscriptionComponent } from './inscription/inscription.component';
     NavigationLateraleComponent,
     ConnexionComponent,
     InformationsComponent,
-    InscriptionComponent
+    InscriptionComponent,
+    IndexComponent
   ],
   imports: [
     BrowserModule
