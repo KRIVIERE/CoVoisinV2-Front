@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { NavigationLateraleComponent } from './navigation-laterale/navigation-laterale.component';
 import { ConnexionComponent } from './index/connexion/connexion.component';
 import { InformationsComponent } from './index/informations/informations.component';
+import { InscriptionComponent } from './inscription/inscription.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { InformationsComponent } from './index/informations/informations.compone
     FooterComponent,
     NavigationLateraleComponent,
     ConnexionComponent,
-    InformationsComponent
+    InformationsComponent,
+    InscriptionComponent
   ],
   imports: [
     BrowserModule
