@@ -1,0 +1,51 @@
+#conteneur {
+  background-image: url("../../../assets/images/photo_presentation.jpg");
+  min-height: 700px;
+}
+
+h1 {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  top: 50px;
+}
+
+form {
+  text-align: center;
+  position: relative;
+  top: 50px;
+}
+
+.connexion-form {
+  margin: 3% 0;
+}
+
+label {
+  color: white;
+  font-weight: bold;
+}
+
+button {
+  border-radius: 25px;
+}
+
+#connexion {
+  background-color: #323232;
+  color: white;
+  border: none;
+  position: relative;
+  top: 25px;
+}
+
+#inscription-block {
+  text-align: center;
+  position: relative;
+  top: 100px;
+}
+
+#inscription {
+  background-color: #009698;
+  color: white;
+  border: none;
+}

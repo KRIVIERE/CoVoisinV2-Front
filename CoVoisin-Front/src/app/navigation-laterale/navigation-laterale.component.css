@@ -1,0 +1,41 @@
+.slider{
+  width: 10%;
+  background-color: #323232;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 0 50px 50px 0;
+  position: fixed;
+  top: 148px;
+  left: -127px;
+  z-index: 100;
+  transition-property: all;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+}
+
+.slider.open {
+  transform: translateX(127px);
+}
+
+div {
+  padding: 5% 0;
+  position: relative;
+  top: 20px;
+  right: 7px;
+}
+
+img {
+  width: 50%;
+}
+
+button {
+  width: 30%;
+  height: 40px;
+  background-color: #323232;
+  border: none;
+  border-radius: 50%;
+  position: relative;
+  bottom: 235px;
+  left: 65px;
+}
