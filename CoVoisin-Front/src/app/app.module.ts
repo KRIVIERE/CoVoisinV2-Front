@@ -10,9 +10,9 @@ import { ConnexionComponent } from './index/connexion/connexion.component';
 import { InformationsComponent } from './index/informations/informations.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { IndexComponent } from './index/index/index.component';
-import {HttpClientModule} from "@angular/common/http";
-import {FormsModule} from "@angular/forms";
-import {UsersService} from "./users.service";
+import {HttpClientModule} from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
+import {UsersService} from './users.service';
 import { TestsComponent } from './tests/tests.component';
 
 @NgModule({
