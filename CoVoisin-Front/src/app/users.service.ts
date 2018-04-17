@@ -33,7 +33,6 @@ export class UsersService {
 
   updateUser(user) {
     let body = JSON.stringify(user);
-    return this.http.post(`${baseURL}/api/users/` + user.id, body, HttpOptions);
+    return this.http.put(`${baseURL}/api/users/` + user.id, body, HttpOptions);
   }
-
 }

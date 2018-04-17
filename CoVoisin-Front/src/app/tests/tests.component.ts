@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersService } from '../users.service';
 import { Observable } from 'rxjs/Observable';
+import {observable} from 'rxjs/symbol/observable';
 
 @Component({
   selector: 'app-tests',
@@ -61,8 +62,34 @@ export class TestsComponent implements OnInit {
         return true;
       },
       error => {
-        console.log('Erreur');
+        console.log('Erreur create');
         return Observable.throw(error);
       });
+  }
+
+  updateUser(user){
+    this.userService.updateUser(user).subscribe(
+      data => {
+        this.getUsers();
+        return true;
+      },
+      error => {
+        console.log('Erreur update');
+        return Observable.throw(error);
+      }
+    );
+  }
+
+  deleteUser(user) {
+    this.userService.deleteUser(user).subscribe(
+      data => {
+        this.getUsers();
+        return true;
+      },
+      error => {
+        console.log('Erreur delete');
+        return Observable.throw(error);
+      }
+    )
   }
 }

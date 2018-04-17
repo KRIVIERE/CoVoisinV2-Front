@@ -1,5 +1,16 @@
 <ul>
-  <li *ngFor="let user of users"> {{user.email}}</li>
+  <li *ngFor="let user of users">
+    <input type="text" name="user.username" [(ngModel)]="user.username">
+    <input type="password" name="user.password" [(ngModel)]="user.password">
+    <input type="text" name="user.pointsNumber" [(ngModel)]="user.pointsNumber">
+    <input type="text" name="user.email" [(ngModel)]="user.email">
+    <input type="text" name="user.lastName" [(ngModel)]="user.lastName">
+    <input type="text" name="user.firstName" [(ngModel)]="user.firstName">
+    <input type="text" name="user.phoneNumber" [(ngModel)]="user.phoneNumber">
+    <input type="text" name="user.address" [(ngModel)]="user.address">
+    <button (click)="updateUser(user)">Modifier</button>
+    <button (click)="deleteUser(user)">Supprimer</button>
+  </li>
 </ul>
 
 <button (click)="getUser(1)">Go</button>
