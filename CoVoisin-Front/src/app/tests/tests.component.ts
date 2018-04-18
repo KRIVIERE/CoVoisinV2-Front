@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersService } from '../users.service';
+import { RequestsService } from '../requests.service';
 import { Observable } from 'rxjs/Observable';
-import {observable} from 'rxjs/symbol/observable';
+/*import { Observable } from 'rxjs/symbol/observable';*/
 
 @Component({
   selector: 'app-tests',
@@ -10,55 +11,51 @@ import {observable} from 'rxjs/symbol/observable';
 })
 export class TestsComponent implements OnInit {
 
-  public users;
-  public current_user;
+  public requests;
+  public current_request;
 
-  public username;
-  public password;
+  public title;
+  public date;
+  public description;
+  public userId;
+  public status;
   public pointsNumber;
-  public email;
-  public lastName;
-  public firstName;
-  public phoneNumber;
-  public address;
 
-  constructor(private userService: UsersService) { }
+  constructor(private requestService: RequestsService) { }
 
   ngOnInit() {
-    this.getUsers();
+    this.getRequests();
   }
 
-  getUsers() {
-   this.userService.getUsers().subscribe(
-     data => {this.users = data},
+  getRequests() {
+   this.requestService.getRequests().subscribe(
+     data => {this.requests = data},
      err => console.log(err),
      () => console.log('done loading users')
    );
   }
 
-  getUser(id) {
-    this.userService.getUser(id).subscribe(
-      data => {this.current_user = data},
+  getRequest(id) {
+    this.requestService.getRequest(id).subscribe(
+      data => {this.current_request = data},
       err => console.log(err),
-      () => console.log('done loading user : ' + this.current_user.username)
+      () => console.log('done loading user : ' + this.current_request.title)
     );
   }
 
-  createUser(username, password, pointsNumber, email, lastName, firstName, phoneNumber, address) {
-    let new_user = {
-      username: username,
-      password: password,
-      pointsNumber: pointsNumber,
-      email: email,
-      lastName: lastName,
-      firstName: firstName,
-      phoneNumber: phoneNumber,
-      address: address
+  createRequest(title, date, description, userId, pointsNumber) {
+    let new_request = {
+      title: title,
+      date: date,
+      description: description,
+      userId: userId,
+      status: status,
+      pointsNumber: pointsNumber
     };
 
-    this.userService.createUser(new_user).subscribe(
+    this.requestService.createRequest(new_request).subscribe(
       data => {
-        this.getUsers();
+        this.getRequests();
         return true;
       },
       error => {
@@ -67,10 +64,10 @@ export class TestsComponent implements OnInit {
       });
   }
 
-  updateUser(user) {
-    this.userService.updateUser(user).subscribe(
+  updateRequest(request) {
+    this.requestService.updateRequest(request).subscribe(
       data => {
-        this.getUsers();
+        this.getRequests();
         return true;
       },
       error => {
@@ -80,10 +77,10 @@ export class TestsComponent implements OnInit {
     );
   }
 
-  deleteUser(user) {
-    this.userService.deleteUser(user).subscribe(
+  deleteRequest(request) {
+    this.requestService.deleteRequest(request).subscribe(
       data => {
-        this.getUsers();
+        this.getRequests();
         return true;
       },
       error => {

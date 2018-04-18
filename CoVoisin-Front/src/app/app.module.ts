@@ -14,6 +14,8 @@ import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import {UsersService} from './users.service';
 import { TestsComponent } from './tests/tests.component';
+import { RequestsComponent } from './requests/requests.component';
+import {RequestsService} from "./requests.service";
 
 @NgModule({
   declarations: [
@@ -25,14 +27,15 @@ import { TestsComponent } from './tests/tests.component';
     InformationsComponent,
     InscriptionComponent,
     IndexComponent,
-    TestsComponent
+    TestsComponent,
+    RequestsComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule
   ],
-  providers: [UsersService],
+  providers: [UsersService, RequestsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

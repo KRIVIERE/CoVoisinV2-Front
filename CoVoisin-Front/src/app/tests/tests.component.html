@@ -1,31 +1,32 @@
 <ul>
-  <li *ngFor="let user of users">
-    <input type="text" name="user.username" [(ngModel)]="user.username">
-    <input type="password" name="user.password" [(ngModel)]="user.password">
-    <input type="text" name="user.pointsNumber" [(ngModel)]="user.pointsNumber">
-    <input type="text" name="user.email" [(ngModel)]="user.email">
-    <input type="text" name="user.lastName" [(ngModel)]="user.lastName">
-    <input type="text" name="user.firstName" [(ngModel)]="user.firstName">
-    <input type="text" name="user.phoneNumber" [(ngModel)]="user.phoneNumber">
-    <input type="text" name="user.address" [(ngModel)]="user.address">
-    <button (click)="updateUser(user)">Modifier</button>
-    <button (click)="deleteUser(user)">Supprimer</button>
+  <li *ngFor="let request of requests">
+    Titre : <input type="text" name="request.title" [(ngModel)]="request.title"><br/>
+    Date : <input type="date" name="date" [(ngModel)]="request.date"><br/>
+    Description : <input type="text" name="description" [(ngModel)]="request.description"><br/>
+    Identifiant user : <input type="number" name="request.userId" [(ngModel)]="request.userId"><br/>
+    Etat de la demande : <input type="number" name="request.status" [(ngModel)]="request.status"><br/>
+    Nombre de points proposés : <input type="number" name="request.pointsNumber" [(ngModel)]="request.pointsNumber"><br/>
+
+
+    <button (click)="updateRequest(request)">Modifier</button><br/>
+    <button (click)="deleteRequest(request)">Supprimer</button>
   </li>
 </ul>
 
-<button (click)="getUser(1)">Go</button>
-<p>{{current_user.username}}</p>
-<p>{{current_user.phoneNumber}}</p>
+
+
+<!--
+<button (click)="getRequest(1)">Go</button>
+<p>{{current_request.id}}</p>
 
 <div>
-  <input type="text" name="username" [(ngModel)]="username">
-  <input type="password" name="password" [(ngModel)]="password">
-  <input type="text" name="pointsNumber" [(ngModel)]="pointsNumber">
-  <input type="text" name="email" [(ngModel)]="email">
-  <input type="text" name="lastName" [(ngModel)]="lastName">
-  <input type="text" name="firstName" [(ngModel)]="firstName">
-  <input type="text" name="phoneNumber" [(ngModel)]="phoneNumber">
-  <input type="text" name="address" [(ngModel)]="address">
+  Titre : <input type="text" name="request.title" [(ngModel)]="request.title"><br/>
+  Date : <input type="date" name="date" [(ngModel)]="request.date"><br/>
+  Description : <input type="text" name="description" [(ngModel)]="request.description"><br/>
+  Identifiant user : <input type="number" name="request.userId" [(ngModel)]="request.requestId"><br/>
+  Etat de la demande : <input type="number" name="request.status" [(ngModel)]="request.status"><br/>
+  Nombre de points proposés : <input type="number" name="request.pointsNumber" [(ngModel)]="request.pointsNumber"><br/>
 
-  <button (click)="createUser(username, password, pointsNumber, email, lastName, firstName, phoneNumber, address)">Inscrire</button>
+  <button (click)="createRequest(title, date, description, userId, status, pointsNumber)">Enregistrer</button>
 </div>
+-->
