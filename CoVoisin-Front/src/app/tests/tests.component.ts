@@ -67,7 +67,7 @@ export class TestsComponent implements OnInit {
       });
   }
 
-  updateUser(user){
+  updateUser(user) {
     this.userService.updateUser(user).subscribe(
       data => {
         this.getUsers();
@@ -90,6 +90,6 @@ export class TestsComponent implements OnInit {
         console.log('Erreur delete');
         return Observable.throw(error);
       }
-    )
+    );
   }
 }

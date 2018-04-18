@@ -7,40 +7,40 @@
 <form>
   <div>
     <label for="pseudo">Pseudo</label>
-    <input type="text" id="pseudo" placeholder="Votre pseudo">
+    <input type="text" id="pseudo" placeholder="Votre pseudo" name="username" [(ngModel)]="username">
   </div>
 
   <div>
     <label for="password">Mot de passe</label>
-    <input type="password" id="password" placeholder="Votre mot  de passe">
+    <input type="password" id="password" placeholder="Votre mot  de passe" name="password" [(ngModel)]="password">
   </div>
 
   <div>
     <label for="firstName">Prénom</label>
-    <input type="text" id="firstName" placeholder="Votre prénom">
+    <input type="text" id="firstName" placeholder="Votre prénom" name="firstName" [(ngModel)]="firstName">
   </div>
 
   <div>
     <label for="lastName">Nom</label>
-    <input type="text" id="lastName" placeholder="Votre nom">
+    <input type="text" id="lastName" placeholder="Votre nom" name="lastName" [(ngModel)]="lastName">
   </div>
 
   <div>
     <label for="email">Email</label>
-    <input type="text" id="email" placeholder="Votre email">
+    <input type="text" id="email" placeholder="Votre email" name="email" [(ngModel)]="email">
   </div>
 
   <div>
-    <label for="phoneNumber">Nom</label>
-    <input type="text" id="phoneNumber" placeholder="Votre numéro de téléphone">
+    <label for="phoneNumber">Numéro de téléphone</label>
+    <input type="text" id="phoneNumber" placeholder="Votre numéro de téléphone" name="phoneNumber" [(ngModel)]="phoneNumber">
   </div>
 
   <div>
     <label for="address">Addresse</label>
-    <input type="text" id="address" placeholder="Votre addresse">
+    <input type="text" id="address" placeholder="Votre addresse" name="address" [(ngModel)]="address">
   </div><br/>
 
-  <button type="submit">Valider</button>
+  <button type="submit" (click)="createUser(username, password, pointsNumber, email, lastName, firstName, phoneNumber, address)">Valider</button>
 </form>
 
 <app-footer></app-footer>
