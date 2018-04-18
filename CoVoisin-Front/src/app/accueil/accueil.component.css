@@ -1,0 +1,9 @@
+.lists {
+  position: relative;
+  top: 150px;
+}
+
+app-footer {
+  position: relative;
+  top: calc(100vh - 339px);
+}
