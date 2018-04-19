@@ -19,6 +19,9 @@ import { OffersService } from './offers.service';
 import { RequestsService } from './requests.service';
 import { DonsComponent } from './categories/dons/dons.component';
 import { FilterPipeModule } from 'ngx-filter-pipe';
+import { CompetencesComponent } from './categories/competences/competences.component';
+import { PretsComponent } from './categories/prets/prets.component';
+import { ServicesComponent } from './categories/services/services.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,10 @@ import { FilterPipeModule } from 'ngx-filter-pipe';
     IndexComponent,
     TestsComponent,
     AccueilComponent,
-    DonsComponent
+    DonsComponent,
+    CompetencesComponent,
+    PretsComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,
