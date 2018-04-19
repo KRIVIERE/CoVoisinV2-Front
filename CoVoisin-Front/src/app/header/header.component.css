@@ -1,6 +1,7 @@
 header {
   background-color: #009698;
   position: fixed;
+  z-index: 999;
 }
 
 img {
