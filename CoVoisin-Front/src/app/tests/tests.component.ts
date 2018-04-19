@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UsersService } from '../users.service';
+//import { UsersService } from '../users.service';
 import { RequestsService } from '../requests.service';
 import { Observable } from 'rxjs/Observable';
 /*import { Observable } from 'rxjs/symbol/observable';*/
@@ -9,13 +9,14 @@ import { Observable } from 'rxjs/Observable';
   templateUrl: './tests.component.html',
   styleUrls: ['./tests.component.css']
 })
+
 export class TestsComponent implements OnInit {
 
   public requests;
-  public current_request;
+  public request;
 
+  public id;
   public title;
-  public date;
   public description;
   public userId;
   public status;
@@ -25,6 +26,11 @@ export class TestsComponent implements OnInit {
 
   ngOnInit() {
     this.getRequests();
+    this.getRequest(this.id);
+    this.createRequest(this.title, this.description, this.userId, this.status, this.pointsNumber);
+    this.updateRequest(this.request);
+    this.deleteRequest(this.request);
+
   }
 
   getRequests() {
@@ -37,16 +43,15 @@ export class TestsComponent implements OnInit {
 
   getRequest(id) {
     this.requestService.getRequest(id).subscribe(
-      data => {this.current_request = data},
+      data => {this.request = data},
       err => console.log(err),
-      () => console.log('done loading user : ' + this.current_request.title)
+      () => console.log('done loading user : ' + this.request.title)
     );
   }
 
-  createRequest(title, date, description, userId, pointsNumber) {
+  createRequest(title, description, userId, status, pointsNumber) {
     let new_request = {
       title: title,
-      date: date,
       description: description,
       userId: userId,
       status: status,
@@ -55,7 +60,7 @@ export class TestsComponent implements OnInit {
 
     this.requestService.createRequest(new_request).subscribe(
       data => {
-        this.getRequests();
+        this.createRequest(title, description, userId, status, pointsNumber);
         return true;
       },
       error => {
@@ -67,7 +72,7 @@ export class TestsComponent implements OnInit {
   updateRequest(request) {
     this.requestService.updateRequest(request).subscribe(
       data => {
-        this.getRequests();
+        this.updateRequest(request);
         return true;
       },
       error => {
@@ -80,7 +85,7 @@ export class TestsComponent implements OnInit {
   deleteRequest(request) {
     this.requestService.deleteRequest(request).subscribe(
       data => {
-        this.getRequests();
+        this.deleteRequest(request);
         return true;
       },
       error => {

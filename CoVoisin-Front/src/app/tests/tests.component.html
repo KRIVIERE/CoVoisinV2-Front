@@ -1,7 +1,7 @@
+<!--
 <ul>
   <li *ngFor="let request of requests">
     Titre : <input type="text" name="request.title" [(ngModel)]="request.title"><br/>
-    Date : <input type="date" name="date" [(ngModel)]="request.date"><br/>
     Description : <input type="text" name="description" [(ngModel)]="request.description"><br/>
     Identifiant user : <input type="number" name="request.userId" [(ngModel)]="request.userId"><br/>
     Etat de la demande : <input type="number" name="request.status" [(ngModel)]="request.status"><br/>
@@ -9,24 +9,26 @@
 
 
     <button (click)="updateRequest(request)">Modifier</button><br/>
-    <button (click)="deleteRequest(request)">Supprimer</button>
+    <button (click)="deleteRequest(request)">Supprimer</button><br/>
   </li>
 </ul>
+-->
+
+<h2>Formulaire de demande</h2>
 
 
 
-<!--
+
 <button (click)="getRequest(1)">Go</button>
-<p>{{current_request.id}}</p>
+<p>{{request.id}}</p>
 
 <div>
   Titre : <input type="text" name="request.title" [(ngModel)]="request.title"><br/>
-  Date : <input type="date" name="date" [(ngModel)]="request.date"><br/>
   Description : <input type="text" name="description" [(ngModel)]="request.description"><br/>
-  Identifiant user : <input type="number" name="request.userId" [(ngModel)]="request.requestId"><br/>
+  Identifiant user : <input type="number" name="request.userId" [(ngModel)]="request.userId"><br/>
   Etat de la demande : <input type="number" name="request.status" [(ngModel)]="request.status"><br/>
   Nombre de points proposés : <input type="number" name="request.pointsNumber" [(ngModel)]="request.pointsNumber"><br/>
 
-  <button (click)="createRequest(title, date, description, userId, status, pointsNumber)">Enregistrer</button>
+  <button (click)="createRequest(title, description, userId, status, pointsNumber)">Enregistrer</button>
 </div>
--->
+

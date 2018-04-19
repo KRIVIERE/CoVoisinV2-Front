@@ -18,9 +18,10 @@ export class RequestsComponent implements OnInit {
 
   //Définir la classe et ses propriétés
   public requests;
+  public request;
 
+  public id;
   public title;
-  public date;
   public description;
   public userId;
   public status;
@@ -33,10 +34,14 @@ export class RequestsComponent implements OnInit {
   ngOnInit() {
 
     this.getRequests();
+    this.getRequest(this.id);
+    this.createRequest(this.title, this.description, this.userId, this.status, this.pointsNumber);
+    this.updateRequest(this.request);
+    this.deleteRequest(this.request);
 
   }
 
-  //Définir la fonction qui indique le bon déroulement de l'instanciation ou une erreur en instanciant getRequests() en inscrivant la méthode getRequests du service correspondant de l'objet ou afin
+  //Retourner toutes les instances de Requests ou afficher un message d'erreur
   getRequests() {
     this.requestService.getRequests().subscribe(
       data => {this.requests = data},
@@ -45,11 +50,19 @@ export class RequestsComponent implements OnInit {
     );
   }
 
-  //Définition de la fonction qui crée une instance de createRequest avec ses propriétés
-  createRequest(title, date, description, userId, status, pointsNumber) {
+  //Retourner toute l'instances de Requests correspondant à l'id ou afficher un message d'erreur
+  getRequest(id) {
+    this.requestService.getRequest(id).subscribe(
+      data => {this.request = data},
+      err => console.log(err),
+      () => console.log('done loading user : ' + this.request.title)
+    );
+  }
+
+  //Créer une instance de Requests ou afficher un message d'erreur
+  createRequest(title, description, userId, status, pointsNumber) {
     let new_request = {
       title: title,
-      date: date,
       description: description,
       userId: userId,
       status: status,
@@ -58,7 +71,7 @@ export class RequestsComponent implements OnInit {
 
     this.requestService.createRequest(new_request).subscribe(
       data => {
-        this.getRequests();
+        this.createRequest(title, description, userId, status, pointsNumber);
         return true;
       },
       error => {
@@ -67,4 +80,29 @@ export class RequestsComponent implements OnInit {
       });
   }
 
+  updateRequest(request) {
+    this.requestService.updateRequest(request).subscribe(
+      data => {
+        this.updateRequest(request);
+        return true;
+      },
+      error => {
+        console.log('Erreur update');
+        return Observable.throw(error);
+      }
+    );
+  }
+
+  deleteRequest(request) {
+    this.requestService.deleteRequest(request).subscribe(
+      data => {
+        this.deleteRequest(request);
+        return true;
+      },
+      error => {
+        console.log('Erreur delete');
+        return Observable.throw(error);
+      }
+    );
+  }
 }

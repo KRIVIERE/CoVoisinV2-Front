@@ -26,7 +26,7 @@ export class RequestsService {
     return this.http.delete(`${baseURL}/api/requests/` + request.id);
   }
 
-    createRequest(request) {
+  createRequest(request) {
     let body = JSON.stringify(request);
     return this.http.post(`${baseURL}/api/requests`, body, HttpOptions);
   }
