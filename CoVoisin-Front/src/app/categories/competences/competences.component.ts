@@ -13,6 +13,7 @@ export class CompetencesComponent implements OnInit {
   public offers;
   public requests;
   filter: any = { category: 'Compétences' };
+  order: string = 'date';
 
   constructor(private offerService: OffersService, private requestService: RequestsService) { }
 

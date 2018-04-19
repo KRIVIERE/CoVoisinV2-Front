@@ -11,6 +11,7 @@ export class PretsComponent implements OnInit {
   public offers;
   public requests;
   filter: any = { category: 'Prêts' };
+  order: string = 'date';
 
   constructor(private offerService: OffersService, private requestService: RequestsService) { }
 

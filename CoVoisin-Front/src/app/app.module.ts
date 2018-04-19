@@ -22,6 +22,7 @@ import { FilterPipeModule } from 'ngx-filter-pipe';
 import { CompetencesComponent } from './categories/competences/competences.component';
 import { PretsComponent } from './categories/prets/prets.component';
 import { ServicesComponent } from './categories/services/services.component';
+import { OrderModule } from 'ngx-order-pipe';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { ServicesComponent } from './categories/services/services.component';
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    FilterPipeModule
+    FilterPipeModule,
+    OrderModule
   ],
   providers: [
     UsersService,

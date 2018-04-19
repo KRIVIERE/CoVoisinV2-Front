@@ -18,7 +18,7 @@
       </thead>
 
       <tbody>
-        <tr *ngFor="let offer of offers">
+        <tr *ngFor="let offer of offers | orderBy : order : true">
           <td>{{offer.date}}</td>
           <td>{{offer.userId}}</td>
           <td>{{offer.title}}</td>
@@ -32,7 +32,6 @@
 
   <div class="col-md-6 lists">
     <h2>Liste des demandes</h2>
-
     <table class="table table-hover">
       <thead>
       <tr>
@@ -46,7 +45,7 @@
       </thead>
 
       <tbody>
-      <tr *ngFor="let request of requests">
+      <tr *ngFor="let request of requests | orderBy : order : true">
         <td>{{request.date}}</td>
         <td>{{request.userId}}</td>
         <td>{{request.title}}</td>

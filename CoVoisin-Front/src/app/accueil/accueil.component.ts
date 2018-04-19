@@ -12,6 +12,7 @@ import { RequestsService } from '../requests.service';
 export class AccueilComponent implements OnInit {
   public offers;
   public requests;
+  order: string = 'date';
 
   constructor(private offerService: OffersService, private requestService: RequestsService) { }
 
