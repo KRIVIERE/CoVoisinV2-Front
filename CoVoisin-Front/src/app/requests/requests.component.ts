@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Observable} from 'rxjs/Observable';
-import {RequestsService} from '../requests.service';
+import { Observable } from 'rxjs/Observable';
+import { RequestsService } from '../requests.service';
 //Importer les classes utiles
 
 
@@ -18,52 +18,51 @@ export class RequestsComponent implements OnInit {
 
   //Définir la classe et ses propriétés
   public requests;
-  public request;
 
-  public id;
   public title;
   public description;
+  public category;
   public userId;
   public status;
   public pointsNumber;
 
   //Constructeur qui permet d'instancier notre classe
-  constructor(private requestService: RequestsService) { }
+  constructor(private requestService: RequestsService) {
+  }
 
   //Initialiser le composant
   ngOnInit() {
 
     this.getRequests();
-    this.getRequest(this.id);
-    this.createRequest(this.title, this.description, this.userId, this.status, this.pointsNumber);
-    this.updateRequest(this.request);
-    this.deleteRequest(this.request);
-
   }
 
   //Retourner toutes les instances de Requests ou afficher un message d'erreur
   getRequests() {
     this.requestService.getRequests().subscribe(
-      data => {this.requests = data},
+      data => {
+        this.requests = data
+      },
       err => console.log(err),
-      () => console.log('done loading users')
+      () => console.log('done loading requests')
     );
   }
 
-  //Retourner toute l'instances de Requests correspondant à l'id ou afficher un message d'erreur
+  /*Retourner toute l'instances de Requests correspondant à l'id ou afficher un message d'erreur
   getRequest(id) {
     this.requestService.getRequest(id).subscribe(
       data => {this.request = data},
       err => console.log(err),
       () => console.log('done loading user : ' + this.request.title)
     );
-  }
+  }*/
+
 
   //Créer une instance de Requests ou afficher un message d'erreur
-  createRequest(title, description, userId, status, pointsNumber) {
+  createRequest(title, description, category, userId, status, pointsNumber) {
     let new_request = {
       title: title,
       description: description,
+      category: category,
       userId: userId,
       status: status,
       pointsNumber: pointsNumber
@@ -71,7 +70,7 @@ export class RequestsComponent implements OnInit {
 
     this.requestService.createRequest(new_request).subscribe(
       data => {
-        this.createRequest(title, description, userId, status, pointsNumber);
+        this.getRequests();
         return true;
       },
       error => {
@@ -80,29 +79,29 @@ export class RequestsComponent implements OnInit {
       });
   }
 
-  updateRequest(request) {
-    this.requestService.updateRequest(request).subscribe(
-      data => {
-        this.updateRequest(request);
-        return true;
-      },
-      error => {
-        console.log('Erreur update');
-        return Observable.throw(error);
-      }
-    );
-  }
+/*  updateRequest(request) {
+      this.requestService.updateRequest(request).subscribe(
+          data => {
+            this.updateRequest(request);
+            return true;
+          },
+          error => {
+            console.log('Erreur update');
+            return Observable.throw(error);
+          }
+      );
+     }
 
-  deleteRequest(request) {
-    this.requestService.deleteRequest(request).subscribe(
-      data => {
-        this.deleteRequest(request);
-        return true;
-      },
-      error => {
-        console.log('Erreur delete');
-        return Observable.throw(error);
-      }
-    );
-  }
+    deleteRequest(request) {
+      this.requestService.deleteRequest(request).subscribe(
+        data => {
+          this.deleteRequest(request);
+          return true;
+        },
+        error => {
+          console.log('Erreur delete');
+          return Observable.throw(error);
+        }
+      );
+    }*/
 }

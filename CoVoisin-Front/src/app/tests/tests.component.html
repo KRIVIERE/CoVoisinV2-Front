@@ -14,21 +14,22 @@
 </ul>
 -->
 
+
 <h2>Formulaire de demande</h2>
 
 
 
 
-<button (click)="getRequest(1)">Go</button>
-<p>{{request.id}}</p>
+<button (click)="getRequests()">Go</button>
+<p>{{request}}</p>
 
 <div>
-  Titre : <input type="text" name="request.title" [(ngModel)]="request.title"><br/>
-  Description : <input type="text" name="description" [(ngModel)]="request.description"><br/>
-  Identifiant user : <input type="number" name="request.userId" [(ngModel)]="request.userId"><br/>
-  Etat de la demande : <input type="number" name="request.status" [(ngModel)]="request.status"><br/>
-  Nombre de points proposés : <input type="number" name="request.pointsNumber" [(ngModel)]="request.pointsNumber"><br/>
+  Titre : <input type="text" name="request.title" [(ngModel)]="title"><br/>
+  Description : <input type="text" name="description" [(ngModel)]="description"><br/>
+  Catégorie : <input type="text" name="category" [(ngModel)]="category"><br/>
+  Identifiant user : <input type="number" name="request.userId" [(ngModel)]="userId"><br/>
+  Etat de la demande : <input type="number" name="request.status" [(ngModel)]="status"><br/>
+  Nombre de points proposés : <input type="number" name="request.pointsNumber" [(ngModel)]="pointsNumber"><br/>
 
   <button (click)="createRequest(title, description, userId, status, pointsNumber)">Enregistrer</button>
 </div>
-

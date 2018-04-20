@@ -13,11 +13,10 @@ import { Observable } from 'rxjs/Observable';
 export class TestsComponent implements OnInit {
 
   public requests;
-  public request;
 
-  public id;
   public title;
   public description;
+  public category;
   public userId;
   public status;
   public pointsNumber;
@@ -26,11 +25,6 @@ export class TestsComponent implements OnInit {
 
   ngOnInit() {
     this.getRequests();
-    this.getRequest(this.id);
-    this.createRequest(this.title, this.description, this.userId, this.status, this.pointsNumber);
-    this.updateRequest(this.request);
-    this.deleteRequest(this.request);
-
   }
 
   getRequests() {
@@ -41,18 +35,19 @@ export class TestsComponent implements OnInit {
    );
   }
 
-  getRequest(id) {
+/* getRequest(id) {
     this.requestService.getRequest(id).subscribe(
       data => {this.request = data},
       err => console.log(err),
       () => console.log('done loading user : ' + this.request.title)
     );
-  }
+  }*/
 
-  createRequest(title, description, userId, status, pointsNumber) {
+  createRequest(title, description, category, userId, status, pointsNumber) {
     let new_request = {
       title: title,
       description: description,
+      category: category,
       userId: userId,
       status: status,
       pointsNumber: pointsNumber
@@ -60,7 +55,7 @@ export class TestsComponent implements OnInit {
 
     this.requestService.createRequest(new_request).subscribe(
       data => {
-        this.createRequest(title, description, userId, status, pointsNumber);
+        this.createRequest(title, description, category, userId, status, pointsNumber);
         return true;
       },
       error => {
@@ -69,8 +64,8 @@ export class TestsComponent implements OnInit {
       });
   }
 
-  updateRequest(request) {
-    this.requestService.updateRequest(request).subscribe(
+/* updateRequest(request) {
+    this.requestService.getRequests().subscribe(
       data => {
         this.updateRequest(request);
         return true;
@@ -93,5 +88,5 @@ export class TestsComponent implements OnInit {
         return Observable.throw(error);
       }
     );
-  }
+  }*/
 }

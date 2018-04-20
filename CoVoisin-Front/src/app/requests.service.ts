@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
+//import { Observable } from 'rxjs/Observable';
 import { HTTPClientHelper } from '../HTTPClientHelper';
 
 const HttpOptions = {
@@ -18,22 +18,22 @@ export class RequestsService {
     return this.http.get(`${baseURL}/api/requests`);
   }
 
-  getRequest(id) {
+/*  getRequest(id) {
     return this.http.get(`${baseURL}/api/requests/` + id);
-  }
-
-  deleteRequest(request) {
-    return this.http.delete(`${baseURL}/api/requests/` + request.id);
-  }
+  }*/
 
   createRequest(request) {
     let body = JSON.stringify(request);
     return this.http.post(`${baseURL}/api/requests`, body, HttpOptions);
   }
 
+/*  deleteRequest(request) {
+    return this.http.delete(`${baseURL}/api/requests/` + request.id);
+  }
+
   updateRequest(request) {
     let body = JSON.stringify(request);
     return this.http.put(`${baseURL}/api/requests/` + request.id, body, HttpOptions);
-  }
+  }*/
 
 }

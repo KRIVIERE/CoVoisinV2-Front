@@ -11,13 +11,13 @@
   </div>
 
   <div>
-    <label for="date">Date du jour</label>
-    <input type="datetime-local" id="date" placeholder="Date du jour" name="date" [(ngModel)]="date">
+    <label for="description">Description</label>
+    <input type="text" id="description" placeholder="Détailler" name="description" [(ngModel)]="description">
   </div>
 
   <div>
-    <label for="description">Description</label>
-    <input type="text" id="description" placeholder="Détailler" name="description" [(ngModel)]="description">
+    <label for="category">Catégorie</label>
+    <input type="text" id="category" placeholder="Catégorie" name="category" [(ngModel)]="category">
   </div>
 
   <div>
@@ -35,7 +35,7 @@
     <input type="number" id="pointsNumber" placeholder="Nombre de points" name="pointsNumber" [(ngModel)]="pointsNumber">
   </div>
 
-  <button type="submit" (click)="createRequest(title, date, description, userId, status, pointsNumber)">Valider</button>
+  <button type="submit" (click)="createRequest(title, description, userId, status, pointsNumber)">Valider</button>
 
 </form>
 
