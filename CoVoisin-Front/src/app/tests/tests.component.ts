@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-//import { UsersService } from '../users.service';
-import { RequestsService } from '../requests.service';
+import { OffersService } from '../offers.service';
 import { Observable } from 'rxjs/Observable';
-/*import { Observable } from 'rxjs/symbol/observable';*/
 
 @Component({
   selector: 'app-tests',
@@ -12,26 +10,26 @@ import { Observable } from 'rxjs/Observable';
 
 export class TestsComponent implements OnInit {
 
-  public requests;
+  public offers;
 
   public title;
-  public description;
   public category;
+  public description;
   public userId;
   public status;
   public pointsNumber;
 
-  constructor(private requestService: RequestsService) { }
+  constructor(private offerService:OffersService) { }
 
   ngOnInit() {
-    this.getRequests();
+    this.getOffers();
   }
 
-  getRequests() {
-   this.requestService.getRequests().subscribe(
-     data => {this.requests = data},
+  getOffers() {
+   this.offerService.getOffers().subscribe(
+     data => {this.offers = data},
      err => console.log(err),
-     () => console.log('done loading users')
+     () => console.log('done loading offers')
    );
   }
 
@@ -43,19 +41,19 @@ export class TestsComponent implements OnInit {
     );
   }*/
 
-  createRequest(title, description, category, userId, status, pointsNumber) {
-    let new_request = {
+  createOffer(title, category, description, userId, status, pointsNumber) {
+    let new_offer = {
       title: title,
-      description: description,
       category: category,
+      description: description,
       userId: userId,
       status: status,
       pointsNumber: pointsNumber
     };
 
-    this.requestService.createRequest(new_request).subscribe(
+    this.offerService.createOffer(new_offer).subscribe(
       data => {
-        this.createRequest(title, description, category, userId, status, pointsNumber);
+        this.createOffer(title, category, description, userId, status, pointsNumber);
         return true;
       },
       error => {

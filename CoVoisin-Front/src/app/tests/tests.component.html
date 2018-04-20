@@ -1,35 +1,38 @@
-<!--
 <ul>
-  <li *ngFor="let request of requests">
-    Titre : <input type="text" name="request.title" [(ngModel)]="request.title"><br/>
-    Description : <input type="text" name="description" [(ngModel)]="request.description"><br/>
-    Identifiant user : <input type="number" name="request.userId" [(ngModel)]="request.userId"><br/>
-    Etat de la demande : <input type="number" name="request.status" [(ngModel)]="request.status"><br/>
-    Nombre de points proposés : <input type="number" name="request.pointsNumber" [(ngModel)]="request.pointsNumber"><br/>
+  <li *ngFor="let offer of offers">
+    Titre : <input type="text" name="offer.title" [(ngModel)]="offer.title"><br/>
+    Description : <input type="text" name="description" [(ngModel)]="offer.description"><br/>
+    Identifiant user : <input type="number" name="offer.userId" [(ngModel)]="offer.userId"><br/>
+    Etat de la demande : <input type="number" name="offer.status" [(ngModel)]="offer.status"><br/>
+    Nombre de points proposés : <input type="number" name="offer.pointsNumber" [(ngModel)]="offer.pointsNumber"><br/>
 
 
-    <button (click)="updateRequest(request)">Modifier</button><br/>
-    <button (click)="deleteRequest(request)">Supprimer</button><br/>
+    <button (click)="updateOffer(offer)">Modifier</button><br/>
+    <button (click)="deleteOffer(offer)">Supprimer</button><br/>
   </li>
 </ul>
--->
 
 
-<h2>Formulaire de demande</h2>
+<button (click)="getOffers(2)">Go</button>
+<p>{{offer.title}}</p>
+<p>{{offer.description}}</p>
 
 
 
 
-<button (click)="getRequests()">Go</button>
-<p>{{request}}</p>
+<h2>Formulaire de l'offre</h2>
+
+
+
 
 <div>
-  Titre : <input type="text" name="request.title" [(ngModel)]="title"><br/>
-  Description : <input type="text" name="description" [(ngModel)]="description"><br/>
+  Titre : <input type="text" name="offer.title" [(ngModel)]="title"><br/>
   Catégorie : <input type="text" name="category" [(ngModel)]="category"><br/>
+  Description : <input type="text" name="description" [(ngModel)]="description"><br/>
   Identifiant user : <input type="number" name="request.userId" [(ngModel)]="userId"><br/>
   Etat de la demande : <input type="number" name="request.status" [(ngModel)]="status"><br/>
   Nombre de points proposés : <input type="number" name="request.pointsNumber" [(ngModel)]="pointsNumber"><br/>
 
-  <button (click)="createRequest(title, description, userId, status, pointsNumber)">Enregistrer</button>
+  <button (click)="createOffer(title, category, description, userId, status, pointsNumber)">Enregistrer</button>
 </div>
+

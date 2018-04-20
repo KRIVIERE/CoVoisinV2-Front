@@ -16,6 +16,8 @@ import {UsersService} from './users.service';
 import { TestsComponent } from './tests/tests.component';
 import { RequestsComponent } from './requests/requests.component';
 import {RequestsService} from "./requests.service";
+import { OffersComponent } from './offers/offers.component';
+import {OffersService} from "./offers.service";
 
 @NgModule({
   declarations: [
@@ -28,14 +30,15 @@ import {RequestsService} from "./requests.service";
     InscriptionComponent,
     IndexComponent,
     TestsComponent,
-    RequestsComponent
+    RequestsComponent,
+    OffersComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule
   ],
-  providers: [UsersService, RequestsService],
+  providers: [UsersService, RequestsService, OffersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
