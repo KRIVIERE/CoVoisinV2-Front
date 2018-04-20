@@ -6,7 +6,7 @@
   text-align: center;
   border-radius: 0 50px 50px 0;
   position: fixed;
-  top: 148px;
+  top: 152px;
   left: -127px;
   z-index: 100;
   transition-property: all;
@@ -38,4 +38,13 @@ button {
   position: relative;
   bottom: 235px;
   left: 65px;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #009698;
 }

@@ -39,3 +39,8 @@ li {
   color: white;
   margin: 0 1%;
 }
+
+a:hover {
+  text-decoration: none;
+  font-weight: bold;
+}

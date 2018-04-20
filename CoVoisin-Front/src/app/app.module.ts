@@ -23,6 +23,7 @@ import { CompetencesComponent } from './categories/competences/competences.compo
 import { PretsComponent } from './categories/prets/prets.component';
 import { ServicesComponent } from './categories/services/services.component';
 import { OrderModule } from 'ngx-order-pipe';
+import { AppRoutingModule } from './/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { OrderModule } from 'ngx-order-pipe';
     HttpClientModule,
     FormsModule,
     FilterPipeModule,
-    OrderModule
+    OrderModule,
+    AppRoutingModule
   ],
   providers: [
     UsersService,

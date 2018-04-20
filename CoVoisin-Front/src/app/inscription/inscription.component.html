@@ -40,7 +40,7 @@
     <input type="text" id="address" placeholder="Votre addresse" name="address" [(ngModel)]="address">
   </div><br/>
 
-  <button type="submit" (click)="createUser(username, password, pointsNumber, email, lastName, firstName, phoneNumber, address)">Valider</button>
+  <a routerLink="/accueil"><button type="submit" (click)="createUser(username, password, pointsNumber, email, lastName, firstName, phoneNumber, address)">Valider</button></a>
 </form>
 
 <app-footer></app-footer>
