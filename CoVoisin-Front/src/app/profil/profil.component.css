@@ -1,0 +1,15 @@
+h2 {
+  position: relative;
+  top: 150px;
+}
+
+ul {
+  position: relative;
+  top: 225px;
+  list-style: none;
+}
+
+app-footer {
+  position: relative;
+  top: calc(100vh - 360px);
+}

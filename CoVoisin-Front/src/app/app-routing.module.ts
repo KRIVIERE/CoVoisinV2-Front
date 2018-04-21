@@ -7,6 +7,7 @@ import { DonsComponent } from './categories/dons/dons.component';
 import { CompetencesComponent } from './categories/competences/competences.component';
 import { PretsComponent } from './categories/prets/prets.component';
 import { ServicesComponent } from './categories/services/services.component';
+import { ProfilComponent } from './profil/profil.component';
 
 
 const routes: Routes = [
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path: 'dons', component: DonsComponent },
   { path: 'competences', component: CompetencesComponent },
   { path: 'prets', component: PretsComponent },
-  { path: 'services', component: ServicesComponent},
+  { path: 'services', component: ServicesComponent },
+  { path: 'profil/:id', component: ProfilComponent },
   { path: '', redirectTo: '/index', pathMatch: 'full'}
 ];
 

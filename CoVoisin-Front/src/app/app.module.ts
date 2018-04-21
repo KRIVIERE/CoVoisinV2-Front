@@ -24,6 +24,7 @@ import { PretsComponent } from './categories/prets/prets.component';
 import { ServicesComponent } from './categories/services/services.component';
 import { OrderModule } from 'ngx-order-pipe';
 import { AppRoutingModule } from './/app-routing.module';
+import { ProfilComponent } from './profil/profil.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { AppRoutingModule } from './/app-routing.module';
     DonsComponent,
     CompetencesComponent,
     PretsComponent,
-    ServicesComponent
+    ServicesComponent,
+    ProfilComponent
   ],
   imports: [
     BrowserModule,
