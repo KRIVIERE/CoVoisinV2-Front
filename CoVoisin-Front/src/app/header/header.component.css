@@ -34,11 +34,6 @@ nav {
   text-align: center;
 }
 
-ul {
-  position: relative;
-  top: 12px;
-}
-
 li {
   display: inline;
   color: white;
