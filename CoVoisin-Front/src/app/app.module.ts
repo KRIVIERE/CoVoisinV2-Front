@@ -25,6 +25,7 @@ import { ServicesComponent } from './categories/services/services.component';
 import { OrderModule } from 'ngx-order-pipe';
 import { AppRoutingModule } from './/app-routing.module';
 import { ProfilComponent } from './profil/profil.component';
+import { FormsComponent } from './forms/forms.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { ProfilComponent } from './profil/profil.component';
     CompetencesComponent,
     PretsComponent,
     ServicesComponent,
-    ProfilComponent
+    ProfilComponent,
+    FormsComponent
   ],
   imports: [
     BrowserModule,

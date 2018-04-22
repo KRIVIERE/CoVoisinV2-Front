@@ -15,4 +15,10 @@ export class OffersService {
   getOffers() {
     return this.http.get(`${baseURL}/api/offers`);
   }
+
+  createOffer(offer) {
+    let body = JSON.stringify(offer);
+    return this.http.post(`${baseURL}/api/offers`, body, HttpOptions);
+  }
+
 }

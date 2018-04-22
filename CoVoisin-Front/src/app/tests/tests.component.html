@@ -1,31 +1,80 @@
-<ul>
-  <li *ngFor="let user of users">
-    <input type="text" name="user.username" [(ngModel)]="user.username">
-    <input type="password" name="user.password" [(ngModel)]="user.password">
-    <input type="text" name="user.pointsNumber" [(ngModel)]="user.pointsNumber">
-    <input type="text" name="user.email" [(ngModel)]="user.email">
-    <input type="text" name="user.lastName" [(ngModel)]="user.lastName">
-    <input type="text" name="user.firstName" [(ngModel)]="user.firstName">
-    <input type="text" name="user.phoneNumber" [(ngModel)]="user.phoneNumber">
-    <input type="text" name="user.address" [(ngModel)]="user.address">
-    <button (click)="updateUser(user)">Modifier</button>
-    <button (click)="deleteUser(user)">Supprimer</button>
-  </li>
-</ul>
+<header class="col-md-12">
+  <img src="../../assets/images/logo_covoisin_white.png" alt="logoCoVoisin" class="offset-md-1 col-md-1" id="logo"/>
+</header>
 
-<button (click)="getUser(1)">Go</button>
-<p>{{current_user.username}}</p>
-<p>{{current_user.phoneNumber}}</p>
+<div id="container1">
+  <h2>Formulaire de demande</h2>
 
-<div>
-  <input type="text" name="username" [(ngModel)]="username">
-  <input type="password" name="password" [(ngModel)]="password">
-  <input type="text" name="pointsNumber" [(ngModel)]="pointsNumber">
-  <input type="text" name="email" [(ngModel)]="email">
-  <input type="text" name="lastName" [(ngModel)]="lastName">
-  <input type="text" name="firstName" [(ngModel)]="firstName">
-  <input type="text" name="phoneNumber" [(ngModel)]="phoneNumber">
-  <input type="text" name="address" [(ngModel)]="address">
+  <form>
+    <div>
+      <label for="requestTitle">Titre</label>
+      <input type="text" id="requestTitle" placeholder="Titre de votre demande" name="requestTitle" [(ngModel)]="requestTitle">
+    </div>
 
-  <button (click)="createUser(username, password, pointsNumber, email, lastName, firstName, phoneNumber, address)">Inscrire</button>
+    <div>
+      <label for="requestCategory">Catégorie</label>
+      <input type="text" id="requestCategory" placeholder="Catégorie" name="requestCategory" [(ngModel)]="requestCategory">
+    </div>
+
+    <div>
+      <label for="requestDescription">Description</label>
+      <input type="text" id="requestDescription" placeholder="Détailler" name="requestDescription" [(ngModel)]="requestDescription">
+    </div>
+
+   <div>
+      <label for="requestUserId">Votre identifiant</label>
+      <input type="text" id="requestUserId" placeholder="Votre identifiant" name="requestUserId" [(ngModel)]="requestUserId">
+    </div>
+
+    <div>
+      <label for="requestStatus">Etat de la demande</label>
+      <input type="number" id="requestStatus" placeholder="Etat" name="requestStatus" [(ngModel)]="requestStatus">
+    </div>
+
+    <div>
+      <label for="requestPointsNumber">Votre proposition de points</label>
+      <input type="number" id="requestPointsNumber" placeholder="Nombre de points" name="requestPointsNumber" [(ngModel)]="requestPointsNumber">
+    </div>
+
+    <button type="submit" (click)="createRequest(requestTitle, requestCategory, requestDescription, requestUserId, requestStatus, requestPointsNumber)">Valider</button>
+
+  </form></div>
+
+<div id="container2">
+  <h2>Formulaire d'offre</h2>
+
+  <form>
+    <div>
+      <label for="offerTitle">Titre de votre offre</label>
+      <input type="text" id="offerTitle" placeholder="Votre titre" name="offerTitle" [(ngModel)]="offerTitle">
+    </div>
+
+    <div>
+      <label for="offerCategory">Catégorie</label>
+      <input type="text" id="offerCategory" placeholder="Catégorie" name="offerCategory" [(ngModel)]="offerCategory">
+    </div>
+
+    <div>
+      <label for="offerDescription">Description</label>
+      <input type="text" id="offerDescription" placeholder="Détailler" name="offerDescription" [(ngModel)]="offerDescription">
+    </div>
+
+    <div>
+      <label for="offerUserId">Votre identifiant</label>
+      <input type="number" id="offerUserId" placeholder="Votre identifiant" name="offerUserId" [(ngModel)]="offerUserId">
+    </div>
+
+    <div>
+      <label for="offerStatus">Etat de l'offre</label>
+      <input type="number" id="offerStatus" placeholder="Etat" name="offerStatus" [(ngModel)]="offerStatus">
+    </div>
+
+    <div>
+      <label for="offerPointsNumber">Nombre de points proposé</label>
+      <input type="number" id="offerPointsNumber" placeholder="Votre numéro de téléphone" name="offerPointsNumber" [(ngModel)]="offerPointsNumber">
+    </div>
+
+    <button type="submit" (click)="createOffer(offerTitle, offerCategory, offerDescription, offerUserId, offerStatus, offerPointsNumber)">Valider</button>
+  </form>
 </div>
+

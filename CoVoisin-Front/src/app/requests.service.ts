@@ -15,4 +15,9 @@ export class RequestsService {
   getRequests() {
     return this.http.get(`${baseURL}/api/requests`);
   }
+
+  createRequest(request) {
+    let body = JSON.stringify(request);
+    return this.http.post(`${baseURL}/api/requests`, body, HttpOptions);
+  }
 }
