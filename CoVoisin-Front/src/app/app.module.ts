@@ -26,6 +26,8 @@ import { OrderModule } from 'ngx-order-pipe';
 import { AppRoutingModule } from './/app-routing.module';
 import { ProfilComponent } from './profil/profil.component';
 import { FormsComponent } from './forms/forms.component';
+import { OffersComponent} from "./offers/offers.component";
+import { RequestsComponent} from "./requests/requests.component";
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { FormsComponent } from './forms/forms.component';
     PretsComponent,
     ServicesComponent,
     ProfilComponent,
-    FormsComponent
+    FormsComponent,
+    OffersComponent,
+    RequestsComponent
   ],
   imports: [
     BrowserModule,

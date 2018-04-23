@@ -4,7 +4,7 @@ import { HTTPClientHelper } from '../HTTPClientHelper';
 
 const HttpOptions = {
   headers: new HttpHeaders({'content-type': 'application/json'})//Sera utilisé par les requêtes qui envoient du json
-}
+};
 
 const baseURL = HTTPClientHelper.baseURL;
 

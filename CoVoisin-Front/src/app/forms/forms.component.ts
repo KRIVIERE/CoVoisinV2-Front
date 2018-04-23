@@ -54,12 +54,12 @@ export class FormsComponent implements OnInit {
 
   createRequest(requestTitle, requestCategory, requestDescription, requestUserId, requestStatus, requestPointsNumber) {
     let new_request = {
-      title: requestTitle,
-      category: requestCategory,
-      description: requestDescription,
-      userId: requestUserId,
-      status: requestStatus,
-      pointsNumber: requestPointsNumber
+      requestTitle: requestTitle,
+      requestCategory: requestCategory,
+      requestDescription: requestDescription,
+      requestUserId: requestUserId,
+      requestStatus: requestStatus,
+      requestPointsNumber: requestPointsNumber
     };
 
     this.requestService.createRequest(new_request).subscribe(
@@ -75,12 +75,12 @@ export class FormsComponent implements OnInit {
 
   createOffer(offerTitle, offerCategory, offerDescription, offerUserId, offerStatus, offerPointsNumber) {
     let new_offer = {
-      title: offerTitle,
-      category: offerCategory,
-      description: offerDescription,
-      userId: offerUserId,
-      status: offerStatus,
-      pointsNumber: offerPointsNumber
+      offerTitle: offerTitle,
+      offerCategory: offerCategory,
+      offerDescription: offerDescription,
+      offerUserId: offerUserId,
+      offerStatus: offerStatus,
+      offerPointsNumber: offerPointsNumber
     };
 
     this.offerService.createOffer(new_offer).subscribe(
