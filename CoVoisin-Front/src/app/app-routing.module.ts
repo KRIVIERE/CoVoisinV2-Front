@@ -8,6 +8,7 @@ import { CompetencesComponent } from './categories/competences/competences.compo
 import { PretsComponent } from './categories/prets/prets.component';
 import { ServicesComponent } from './categories/services/services.component';
 import { ProfilComponent } from './profil/profil.component';
+import { FormsComponent } from './forms/forms.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'prets', component: PretsComponent },
   { path: 'services', component: ServicesComponent },
   { path: 'profil/:id', component: ProfilComponent },
+  { path: 'formulaires', component: FormsComponent },
   { path: '', redirectTo: '/index', pathMatch: 'full'}
 ];
 

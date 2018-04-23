@@ -23,7 +23,7 @@ import { CompetencesComponent } from './categories/competences/competences.compo
 import { PretsComponent } from './categories/prets/prets.component';
 import { ServicesComponent } from './categories/services/services.component';
 import { OrderModule } from 'ngx-order-pipe';
-import { AppRoutingModule } from './/app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { ProfilComponent } from './profil/profil.component';
 import { FormsComponent } from './forms/forms.component';
 import { OffersComponent} from "./offers/offers.component";
