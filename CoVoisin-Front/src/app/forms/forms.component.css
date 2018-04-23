@@ -1,11 +1,11 @@
-#container1 {
+.forms {
 
-  float: left;
-
+  position: relative;
+  top: 150px;
 }
 
-#container2 {
+app-footer {
 
-  float: left;
-
+  position: relative;
+  top: calc(100vh - 408px);
 }

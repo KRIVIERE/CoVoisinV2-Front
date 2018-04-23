@@ -1,80 +1,88 @@
-<header class="col-md-12">
-  <img src="../../assets/images/logo_covoisin_white.png" alt="logoCoVoisin" class="offset-md-1 col-md-1" id="logo"/>
-</header>
+<app-header></app-header>
+<app-navigation-laterale></app-navigation-laterale>
 
-<div id="container1">
-  <h2>Formulaire de demande</h2>
+<div class="row col-md-12">
+  <div class="forms col-md-6">
+    <h2>Formulaire de demande</h2>
 
-  <form>
-    <div>
-      <label for="requestTitle">Titre</label>
-      <input type="text" id="requestTitle" placeholder="Titre de votre demande" name="requestTitle" [(ngModel)]="requestTitle">
-    </div>
+    <form>
+      <div>
+        <label for="requestTitle">Titre</label>
+        <input type="text" id="requestTitle" placeholder="Titre de votre demande" name="requestTitle" [(ngModel)]="requestTitle">
+      </div>
 
-    <div>
-      <label for="requestCategory">Catégorie</label>
-      <input type="text" id="requestCategory" placeholder="Catégorie" name="requestCategory" [(ngModel)]="requestCategory">
-    </div>
-
-    <div>
-      <label for="requestDescription">Description</label>
-      <input type="text" id="requestDescription" placeholder="Détailler" name="requestDescription" [(ngModel)]="requestDescription">
-    </div>
-
-   <div>
-      <label for="requestUserId">Votre identifiant</label>
-      <input type="text" id="requestUserId" placeholder="Votre identifiant" name="requestUserId" [(ngModel)]="requestUserId">
-    </div>
-
-    <div>
-      <label for="requestStatus">Etat de la demande</label>
-      <input type="number" id="requestStatus" placeholder="Etat" name="requestStatus" [(ngModel)]="requestStatus">
-    </div>
-
-    <div>
-      <label for="requestPointsNumber">Votre proposition de points</label>
-      <input type="number" id="requestPointsNumber" placeholder="Nombre de points" name="requestPointsNumber" [(ngModel)]="requestPointsNumber">
-    </div>
-
-    <button type="submit" (click)="createRequest(requestTitle, requestCategory, requestDescription, requestUserId, requestStatus, requestPointsNumber)">Valider</button>
-
-  </form></div>
-
-<div id="container2">
-  <h2>Formulaire d'offre</h2>
-
-  <form>
-    <div>
-      <label for="offerTitle">Titre de votre offre</label>
-      <input type="text" id="offerTitle" placeholder="Votre titre" name="offerTitle" [(ngModel)]="offerTitle">
-    </div>
-
-    <div>
       <label for="offerCategory">Catégorie</label>
-      <input type="text" id="offerCategory" placeholder="Catégorie" name="offerCategory" [(ngModel)]="offerCategory">
-    </div>
+      <select>
+        <option>Dons</option>
+        <option>Compétences</option>
+        <option>Prêts</option>
+        <option>Services</option>
+      </select>
 
-    <div>
-      <label for="offerDescription">Description</label>
-      <input type="text" id="offerDescription" placeholder="Détailler" name="offerDescription" [(ngModel)]="offerDescription">
-    </div>
+      <div>
+        <label for="requestDescription">Description</label>
+        <input type="text" id="requestDescription" placeholder="Détailler" name="requestDescription" [(ngModel)]="requestDescription">
+      </div>
 
-    <div>
-      <label for="offerUserId">Votre identifiant</label>
-      <input type="number" id="offerUserId" placeholder="Votre identifiant" name="offerUserId" [(ngModel)]="offerUserId">
-    </div>
+     <div>
+        <label for="requestUserId">Votre identifiant</label>
+        <input type="text" id="requestUserId" placeholder="Votre identifiant" name="requestUserId" [(ngModel)]="requestUserId">
+      </div>
 
-    <div>
-      <label for="offerStatus">Etat de l'offre</label>
-      <input type="number" id="offerStatus" placeholder="Etat" name="offerStatus" [(ngModel)]="offerStatus">
-    </div>
+      <div>
+        <label for="requestStatus">Etat de la demande</label>
+        <input type="number" id="requestStatus" placeholder="Etat" name="requestStatus" [(ngModel)]="requestStatus">
+      </div>
 
-    <div>
-      <label for="offerPointsNumber">Nombre de points proposé</label>
-      <input type="number" id="offerPointsNumber" placeholder="Votre numéro de téléphone" name="offerPointsNumber" [(ngModel)]="offerPointsNumber">
-    </div>
+      <div>
+        <label for="requestPointsNumber">Votre proposition de points</label>
+        <input type="number" id="requestPointsNumber" placeholder="Nombre de points" name="requestPointsNumber" [(ngModel)]="requestPointsNumber">
+      </div>
 
-    <button type="submit" (click)="createOffer(offerTitle, offerCategory, offerDescription, offerUserId, offerStatus, offerPointsNumber)">Valider</button>
-  </form>
+      <button type="submit" (click)="createRequest(requestTitle, requestCategory, requestDescription, requestUserId, requestStatus, requestPointsNumber)">Valider</button>
+
+    </form>
 </div>
+
+  <div class="forms col-md-6">
+    <h2>Formulaire d'offre</h2>
+
+    <form>
+      <div>
+        <label for="offerTitle">Titre de votre offre</label>
+        <input type="text" id="offerTitle" placeholder="Titre de votre offre" name="offerTitle" [(ngModel)]="offerTitle">
+      </div>
+
+      <div>
+        <label for="offerCategory">Catégorie</label>
+        <input type="text" id="offerCategory" placeholder="Catégorie" name="offerCategory" [(ngModel)]="offerCategory">
+      </div>
+
+      <div>
+        <label for="offerDescription">Description</label>
+        <input type="text" id="offerDescription" placeholder="Détailler" name="offerDescription" [(ngModel)]="offerDescription">
+      </div>
+
+      <div>
+        <label for="offerUserId">Votre identifiant</label>
+        <input type="number" id="offerUserId" placeholder="Votre identifiant" name="offerUserId" [(ngModel)]="offerUserId">
+      </div>
+
+      <div>
+        <label for="offerStatus">Etat de l'offre</label>
+        <input type="number" id="offerStatus" placeholder="Etat" name="offerStatus" [(ngModel)]="offerStatus">
+      </div>
+
+      <div>
+        <label for="offerPointsNumber">Nombre de points proposé</label>
+        <input type="number" id="offerPointsNumber" placeholder="Votre offre de points" name="offerPointsNumber" [(ngModel)]="offerPointsNumber">
+      </div>
+
+      <button type="submit" (click)="createOffer(offerTitle, offerCategory, offerDescription, offerUserId, offerStatus, offerPointsNumber)">Valider</button>
+    </form>
+  </div>
+</div>
+
+
+<app-footer></app-footer>
 

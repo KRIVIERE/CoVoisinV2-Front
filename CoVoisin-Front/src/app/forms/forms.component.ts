@@ -15,12 +15,18 @@ export class FormsComponent implements OnInit {
   public offers;
   public requests;
 
-  public title;
-  public description;
-  public category;
-  public userId;
-  public status;
-  public pointsNumber;
+  public requestTitle;
+  public requestCategory;
+  public requestDescription;
+  public requestUserId;
+  public requestStatus;
+  public requestPointsNumber;
+  public offerTitle;
+  public offerCategory;
+  public offerDescription;
+  public offerUserId;
+  public offerStatus;
+  public offerPointsNumber;
 
 
   constructor(private offerService: OffersService, private requestService: RequestsService) { }
@@ -46,14 +52,14 @@ export class FormsComponent implements OnInit {
     );
   }
 
-  createRequest(title, description, category, userId, status, pointsNumber) {
+  createRequest(requestTitle, requestCategory, requestDescription, requestUserId, requestStatus, requestPointsNumber) {
     let new_request = {
-      title: title,
-      description: description,
-      category: category,
-      userId: userId,
-      status: status,
-      pointsNumber: pointsNumber
+      title: requestTitle,
+      category: requestCategory,
+      description: requestDescription,
+      userId: requestUserId,
+      status: requestStatus,
+      pointsNumber: requestPointsNumber
     };
 
     this.requestService.createRequest(new_request).subscribe(
@@ -67,13 +73,14 @@ export class FormsComponent implements OnInit {
       });
   }
 
-  createOffer(title, category, description, userId, status, pointsNumber) {
+  createOffer(offerTitle, offerCategory, offerDescription, offerUserId, offerStatus, offerPointsNumber) {
     let new_offer = {
-      title: title,
-      category: category,
-      description: description,
-      userId: userId,
-      pointsNumber: pointsNumber
+      title: offerTitle,
+      category: offerCategory,
+      description: offerDescription,
+      userId: offerUserId,
+      status: offerStatus,
+      pointsNumber: offerPointsNumber
     };
 
     this.offerService.createOffer(new_offer).subscribe(
