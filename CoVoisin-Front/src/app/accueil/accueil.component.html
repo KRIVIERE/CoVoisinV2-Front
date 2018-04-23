@@ -19,12 +19,12 @@
 
       <tbody>
         <tr *ngFor="let offer of offers | orderBy : order : true">
-          <td>{{offer.date}}</td>
-          <td><a routerLink="/profil/{{offer.userId}}">Profil</a></td>
-          <td>{{offer.title}}</td>
-          <td>{{offer.category}}
-          <td>{{offer.description}}</td>
-          <td>{{offer.pointsNumber}}</td>
+          <td>{{offer.offerDate}}</td>
+          <td><a routerLink="/profil/{{offer.offerUserId}}">Profil</a></td>
+          <td>{{offer.offerTitle}}</td>
+          <td>{{offer.offerCategory}}
+          <td>{{offer.offerDescription}}</td>
+          <td>{{offer.offerPointsNumber}}</td>
         </tr>
       </tbody>
     </table>
@@ -46,12 +46,12 @@
 
       <tbody>
       <tr *ngFor="let request of requests | orderBy : order : true">
-        <td>{{request.date}}</td>
+        <td>{{request.requestDate}}</td>
         <td><a routerLink="/profil/{{request.userId}}">Profil</a></td>
-        <td>{{request.title}}</td>
-        <td>{{request.category}}
-        <td>{{request.description}}</td>
-        <td>{{request.pointsNumber}}</td>
+        <td>{{request.requestTitle}}</td>
+        <td>{{request.requestCategory}}
+        <td>{{request.requestDescription}}</td>
+        <td>{{request.requestPointsNumber}}</td>
       </tr>
       </tbody>
     </table>
