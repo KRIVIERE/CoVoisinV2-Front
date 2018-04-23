@@ -18,7 +18,7 @@
       </thead>
 
       <tbody>
-      <tr *ngFor="let offer of offers | filterBy : filter | orderBy : order : true">
+      <tr *ngFor="let offer of offers | filterBy : filter1 | orderBy : order : true">
         <td>{{offer.offerDate}}</td>
         <td><a routerLink="/profil/{{offer.offerUserId}}">Profil</a></td>
         <td>{{offer.offerTitle}}</td>
@@ -46,7 +46,7 @@
       </thead>
 
       <tbody>
-      <tr *ngFor="let request of requests | filterBy : filter | orderBy : order : true">
+      <tr *ngFor="let request of requests | filterBy : filter2 | orderBy : order : true">
         <td>{{request.requestDate}}</td>
         <td><a routerLink="/profil/{{request.requestUserId}}">Profil</a></td>
         <td>{{request.requestTitle}}</td>

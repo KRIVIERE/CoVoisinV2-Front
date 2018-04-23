@@ -12,7 +12,8 @@ import { RequestsService } from '../../requests.service';
 export class DonsComponent implements OnInit {
   public offers;
   public requests;
-  filter: any = { category: 'Dons' };
+  filter1: any = { offerCategory: 'Dons' };
+  filter2: any = { requestCategory: 'Dons' };
   order: string = "date";
 
   constructor(private offerService: OffersService, private requestService: RequestsService) { }

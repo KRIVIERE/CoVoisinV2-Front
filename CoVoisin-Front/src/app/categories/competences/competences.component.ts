@@ -12,7 +12,8 @@ import { RequestsService } from '../../requests.service';
 export class CompetencesComponent implements OnInit {
   public offers;
   public requests;
-  filter: any = { category: 'Compétences' };
+  filter1: any = { offerCategory: 'Compétences' };
+  filter2: any = { requestCategory: 'Compétences' };
   order: string = 'date';
 
   constructor(private offerService: OffersService, private requestService: RequestsService) { }

@@ -42,7 +42,7 @@
       <input type="number" id="offerPointsNumber" placeholder="Votre offre de points" name="offerPointsNumber" [(ngModel)]="offerPointsNumber">
     </div>
 
-    <button type="submit" (click)="createOffer(offerTitle, offerCategory, offerDescription, offerUserId, offerStatus, offerPointsNumber)">Valider</button>
+    <a routerLink="/accueil"><button type="submit" (click)="createOffer(offerTitle, offerCategory, offerDescription, offerUserId, offerStatus, offerPointsNumber)">Valider</button></a>
   </form>
 </div>
 
@@ -84,7 +84,7 @@
         <input type="number" id="requestPointsNumber" placeholder="Nombre de points" name="requestPointsNumber" [(ngModel)]="requestPointsNumber">
       </div>
 
-      <button type="submit" (click)="createRequest(requestTitle, requestCategory, requestDescription, requestUserId, requestStatus, requestPointsNumber)">Valider</button>
+      <a routerLink="/accueil"><button type="submit" (click)="createRequest(requestTitle, requestCategory, requestDescription, requestUserId, requestStatus, requestPointsNumber)">Valider</button></a>
 
     </form>
   </div>

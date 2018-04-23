@@ -10,7 +10,8 @@ import {OffersService} from '../../offers.service';
 export class PretsComponent implements OnInit {
   public offers;
   public requests;
-  filter: any = { category: 'Prêts' };
+  filter1: any = { offerCategory: 'Prêts' };
+  filter2: any = { requestCategory: 'Prêts' };
   order: string = 'date';
 
   constructor(private offerService: OffersService, private requestService: RequestsService) { }
