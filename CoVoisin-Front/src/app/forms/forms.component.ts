@@ -1,14 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import { RequestsService } from '../requests.service';
 import { OffersService } from '../offers.service';
+import { RequestsService } from '../requests.service';
+import { Observable } from 'rxjs/Observable';
+
 
 @Component({
-  selector: 'app-tests',
-  templateUrl: './tests.component.html',
-  styleUrls: ['./tests.component.css']
+  selector: 'app-forms',
+  templateUrl: './forms.component.html',
+  styleUrls: ['./forms.component.css']
 })
-export class TestsComponent implements OnInit {
+
+export class FormsComponent implements OnInit {
 
   public offers;
   public requests;
@@ -26,6 +28,7 @@ export class TestsComponent implements OnInit {
   public offerStatus;
   public offerPointsNumber;
 
+
   constructor(private offerService: OffersService, private requestService: RequestsService) { }
 
   ngOnInit() {
@@ -33,7 +36,7 @@ export class TestsComponent implements OnInit {
     this.getRequests();
   }
 
- getOffers() {
+  getOffers() {
     this.offerService.getOffers().subscribe(
       data => {this.offers = data},
       err => console.log(err),
@@ -52,8 +55,8 @@ export class TestsComponent implements OnInit {
   createRequest(requestTitle, requestCategory, requestDescription, requestUserId, requestStatus, requestPointsNumber) {
     let new_request = {
       title: requestTitle,
-      description: requestCategory,
-      category: requestDescription,
+      category: requestCategory,
+      description: requestDescription,
       userId: requestUserId,
       status: requestStatus,
       pointsNumber: requestPointsNumber
@@ -72,14 +75,13 @@ export class TestsComponent implements OnInit {
 
   createOffer(offerTitle, offerCategory, offerDescription, offerUserId, offerStatus, offerPointsNumber) {
     let new_offer = {
-      offer: offerTitle,
+      title: offerTitle,
       category: offerCategory,
       description: offerDescription,
       userId: offerUserId,
       status: offerStatus,
       pointsNumber: offerPointsNumber
     };
-
 
     this.offerService.createOffer(new_offer).subscribe(
       data => {
@@ -91,6 +93,5 @@ export class TestsComponent implements OnInit {
         return Observable.throw(error);
       });
   }
-
 
 }

@@ -17,21 +17,9 @@ export class OffersService {
     return this.http.get(`${baseURL}/api/offers`);
   }
 
-/*  getOffer(id) {
-    return this.http.get(`${baseURL}/api/offers/` + id);
-  }
-
-  deleteOffer(offer) {
-    return this.http.delete(`${baseURL}/api/offers/` + offer.id);
-  }*/
-
   createOffer(offer) {
     let body = JSON.stringify(offer);
     return this.http.post(`${baseURL}/api/offers`, body, HttpOptions);
   }
 
-/*  updateUser(user) {
-    let body = JSON.stringify(user);
-    return this.http.put(`${baseURL}/api/users/` + user.id, body, HttpOptions);
-  }*/
 }
